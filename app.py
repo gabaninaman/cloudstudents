@@ -4,10 +4,10 @@ import os
 app = Flask(__name__)
 
 # Replace these values with your Azure SQL settings
-server = 'your-sql-server-name.database.windows.net'
-database = 'StudentDB'
-username = 'your-sql-admin'
-password = 'your-password'
+server = 'sqlservergiy6qzboazqik.database.windows.net'
+database = 'sampledb'
+username = 'cloudadmin'
+password = 'CloudProject132'
 driver = '{ODBC Driver 17 for SQL Server}'
 
 conn_str = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
