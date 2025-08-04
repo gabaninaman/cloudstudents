@@ -1,16 +1,19 @@
 from flask import Flask, render_template, request
 import os
+import pyodbc
 
 app = Flask(__name__)
-
-# Replace these values with your Azure SQL settings
 server = 'sqlservergiy6qzboazqik.database.windows.net'
-database = 'sampledb'
-username = 'cloudadmin'
-password = 'CloudProject132'
-driver = '{ODBC Driver 17 for SQL Server}'
+driver = '{ODBC Driver 18 for SQL Server}'
 
-conn_str = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+
+database='sampledb';
+Uid='cloudadmin';
+Pwd='CloudProject132';
+Encrypt='yes';
+TrustServerCertificate='no';
+
+conn_str = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={Uid};PWD={Pwd};Encrypt={Encrypt};TrustServerCertificate={TrustServerCertificate}'
 
 @app.route('/')
 def index():
